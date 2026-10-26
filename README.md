@@ -93,7 +93,7 @@ CORS_ORIGIN=http://localhost:3000,http://localhost:3001,http://chat.local,http:/
 - `.env` は起動時にしか読まれないので、変更後は **サーバーを再起動** する
 
 ### 他の PC から使うための Windows 設定
-管理者権限の PowerShell で、受信 TCP 80 / 3001 を許可する（ネットワークが `yse.ac.jp`＝ドメインの場合は Domain プロファイル）。
+管理者権限の PowerShell で、受信 TCP 80 / 3001 を許可する。
 
 ```powershell
 New-NetFirewallRule -DisplayName "chat http" -Direction Inbound -Protocol TCP -LocalPort 80,3001 -Action Allow -Profile Domain,Private
